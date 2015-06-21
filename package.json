@@ -1,0 +1,11 @@
+{
+  "name": "log-bot",
+  "version": "1.0.0",
+  "description": "slack bot to log all messages",
+  "author": "Ahmad El-Melegy",
+  "main": "app.js",
+  "dependencies": {
+  "express" : "^4.x.x"
+  , "body-parser" : "^1.x.x"
+  }
+}
