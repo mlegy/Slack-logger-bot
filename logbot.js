@@ -34,8 +34,8 @@ module.exports = function(req, res, next) {
     }
 
     function getFilePath(channelName, appDir) {
-        // the file name will be the cannel name with .txt extension
-        var file_name = channelName + ".txt";
+        // the file name will be the cannel name with .log extension
+        var file_name = channelName + ".log";
         // the file path will be the application_path/logs/filename
         var filePath = appDir + "/logs/" + file_name;
         return filePath;
