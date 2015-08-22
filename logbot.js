@@ -20,7 +20,7 @@ module.exports = function(req, res, next) {
     // auto respond to some messages --> implement it yourself
     //respond(); --> NOT HERE (CAT bot ONLY)
 
-    function getDate(timestamp) 
+    function getDate(timestamp) {
         // create a new javascript Date object based on the timestamp
         // multiplied by 1000 so that the argument is in milliseconds, not seconds
         var date = new Date(timestamp * 1000);
@@ -29,7 +29,7 @@ module.exports = function(req, res, next) {
         // minutes part from the timestamp
         var minutes = "0" + date.getMinutes();
         // minutes part from the timestamp
-        var seconds = date.getSeconds();
+        var seconds = "0" + date.getSeconds();
         // will display time in 10:30 format
         var formattedTime = hours + ':' + minutes.substr(-2) + ':' + seconds.substr(-2);
         return formattedTime;
