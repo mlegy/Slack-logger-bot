@@ -13,8 +13,10 @@ app.use(bodyParser.urlencoded({
 
 // test route
 app.get('/', function(req, res) {
-    res.status(200).send('Hello CAT!')
+    res.status(200).send('LOGBOT');
 });
+
+app.use(express.static('logs/'));
 
 // bot route
 app.post('/logbot', logbot);
