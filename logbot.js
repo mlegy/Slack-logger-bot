@@ -28,14 +28,16 @@ module.exports = function(req, res, next) {
         var hours = date.getHours();
         // minutes part from the timestamp
         var minutes = "0" + date.getMinutes();
+        // minutes part from the timestamp
+        var seconds = "0" + date.getSeconds();
         // will display time in 10:30 format
-        var formattedTime = hours + ':' + minutes.substr(-2);
+        var formattedTime = hours + ':' + minutes.substr(-2) + ':' + seconds.substr(-2);
         return formattedTime;
     }
 
     function getFilePath(channelName, appDir) {
-        // the file name will be the cannel name with .txt extension
-        var file_name = channelName + ".txt";
+        // the file name will be the cannel name with .log extension
+        var file_name = channelName + ".log";
         // the file path will be the application_path/logs/filename
         var filePath = appDir + "/logs/" + file_name;
         return filePath;

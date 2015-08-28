@@ -10,19 +10,19 @@ The application is built with `Express 4` on `Node.js`
 ## How to deply the bot
 1. Install `Node.js`. [Check this link](https://github.com/joyent/node/wiki/Installing-Node.js-via-package-manager)
 2. clone the repo:
-  ```sh
+  ```$
     git@github.com:AhmadElMelegy/slack-logger-bot.git
     ```
 3. install the application
-   ```sh
-    npm install
+   ```$
+    npm install & mkdir logs
     ```
 4. Install `forever` to make the application run permanently.
-    ```sh
+    ```$
     sudo npm install -g forever
     ```
 5. Run the application as a service with `forever`
-    ```sh
+    ```$
     forever start app.js
     ```
 6. Add an `Outgoing WebHooks Integration` in your Slack one for each channel [form here](http://slack.com/services/new)
