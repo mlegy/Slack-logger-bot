@@ -1,5 +1,6 @@
 var path = require('path');
 var fs = require('fs');
+var ejs = require('ejs');
 var appDir = path.dirname(require.main.filename);
 
 module.exports = function(req, res, next) {

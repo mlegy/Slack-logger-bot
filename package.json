@@ -5,7 +5,8 @@
   "author": "Ahmad El-Melegy",
   "main": "app.js",
   "dependencies": {
-  "express" : "^4.x.x"
-  , "body-parser" : "^1.x.x"
+  "express" : "^4.x.x",
+  "body-parser" : "^1.x.x",
+  "ejs" : "latest"
   }
 }
