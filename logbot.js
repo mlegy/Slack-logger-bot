@@ -54,7 +54,7 @@ module.exports = function(req, res, next) {
                     }
                 });
             } else {
-              toSave = "<h1>" + channelName + "</h1>" + toSave;
+              toSave = "<h1>#" + channelName + "</h1>" + toSave;
                 // if the file does not exist create it and write into it
                 fs.writeFile(filePath, toSave, 'UTF-8', function(err) {
                     if (err) {
