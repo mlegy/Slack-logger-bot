@@ -12,7 +12,7 @@ module.exports = function(req, res, next) {
     // will display time in 10:30 format
     var formattedTime = getDate(timestamp);
     // prepare the string to save
-    var toSave = "[" + formattedTime + "]" + userName + " : " + text + "\r\n";
+    var toSave = "<span class='message'>[" + formattedTime + "]" + userName + "(" + + ")" + " : " + text + "</span></br>";
     // get the file path to save
     var filePath = getFilePath(channelName, appDir);
     // write into the file
@@ -37,7 +37,7 @@ module.exports = function(req, res, next) {
 
     function getFilePath(channelName, appDir) {
         // the file name will be the cannel name with .log extension
-        var file_name = channelName + ".log";
+        var file_name = channelName + ".html";
         // the file path will be the application_path/logs/filename
         var filePath = appDir + "/logs/" + file_name;
         return filePath;
@@ -54,6 +54,7 @@ module.exports = function(req, res, next) {
                     }
                 });
             } else {
+              toSave = "<h1>" + channelName + "</h1>" + toSave;
                 // if the file does not exist create it and write into it
                 fs.writeFile(filePath, toSave, 'UTF-8', function(err) {
                     if (err) {
