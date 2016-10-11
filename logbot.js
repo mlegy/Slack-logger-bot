@@ -12,7 +12,7 @@ module.exports = function(req, res, next) {
     // will display time in 10:30 format
     var formattedTime = getDate(timestamp);
     // prepare the string to save
-    var toSave = "<span class='message'>[" + formattedTime + "]" + userName + "(" + + ")" + " : " + text + "</span></br>";
+    var toSave = "<span class='message'>[" + formattedTime + "]" + userName + " : " + text + "</span></br>";
     // get the file path to save
     var filePath = getFilePath(channelName, appDir);
     // write into the file
